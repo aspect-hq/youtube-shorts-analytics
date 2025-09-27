@@ -1,0 +1,29 @@
+[project]
+name = "youtube-shorts-analytics-server"
+version = "0.1.0"
+description = "Python FastAPI server for YouTube Shorts analytics using the Aspect SDK"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+    "aspect-sdk>=0.0.3",
+    "yt-dlp>=2023.12.30",
+    "python-multipart>=0.0.6",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.25.0",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.uv]
+dev-dependencies = []
